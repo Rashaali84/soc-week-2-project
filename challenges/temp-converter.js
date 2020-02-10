@@ -1,7 +1,15 @@
 console.log('tempConverter script has loaded');
 
 // write this function!
-function tempConverter(temperature, degrees) {
+function tempConverter(degrees, temperature) {
+  var resultValue;
+  if (temperature === 'f' || temperature === 'F') {
+    resultValue = degrees * 9 / 5 + 32;
+  }
+  else {
+    resultValue = (degrees - 32) * 5 / 9;
+  }
+  return Math.round(resultValue).toFixed(2);
 }
 
 // if the user wants to convert to farenheit
@@ -21,18 +29,26 @@ console.assert(tempConverter(500, 'Farenheit') === 'Farenheit is not supported',
 
 
 function tempConverterHandler() {
-  // prompt the user for a noun, verb and adjective
-  const userTempStr = prompt('enter a temperature to convert');
-  // cast userDegreesStr to a Number, and assign the value to userDecrees
-  const userDegrees = prompt('would you like to convert to farenheit or celcius?');
-
-  console.assert(typeof userDegrees === 'number', "don't forget to cast userDegrees to a string!");
-
   // perform core logic
   // write this line!
+  let result;
+  // prompt the user for a noun, verb and adjective
+  const userTempStr = prompt('would you like to convert to "f" for farenheit or "c" celcius?');
+  if (String(userTempStr) === 'f' || String(userTempStr) === 'c' || String(userTempStr) === 'C' || String(userTempStr) === 'F') {
+    // cast userDegreesStr to a Number, and assign the value to userDecrees
+    const userDegrees = prompt('enter a temperature to convert');
+    if (Number(userDegrees)) {
+      result = tempConverter(userDegrees, userTempStr);
+      alert(result);
+    } else {
+      alert('Write a valid number please .try again!');
+      console.assert(typeof userDegrees === 'number', "don't forget to cast userDegrees to a string!");
+    }
+  }
+  else
+    alert('Write a valid convert choice please, try again !');
 
-  // alert result for the user
-  // write this line!
+  //alert(result);
 
   // log action for the developer
   console.log('\n--- tempConverter ---');

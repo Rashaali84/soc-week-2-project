@@ -1,7 +1,18 @@
 console.log('devowel script has loaded');
 
 // write this function!
-function devowel() {
+function devowel(stringValue) {
+
+
+  return stringValue.replace(/[aeiou]/ig, '');
+
+  /*Regular-exp instead of using a string as a first input
+    to reduce code lines.
+    g --> find all matches not only the first -- global match
+    i --> case insensitive .
+    /  / -- > the pattern
+    [] tells to match any character in the set
+    aeiou the set of characters. */
 }
 
 // remove all vowels, lower and upper case!

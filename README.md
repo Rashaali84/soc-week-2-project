@@ -19,7 +19,7 @@ The Motivation behind this project is to get more comfortable with java-scripts 
 
 This is a screen-shot of the final live demo of this project.
 
-![screenshot](./jsImage.png)
+![screenshot](./jsImage2.png)
 
 ## Technologies
 

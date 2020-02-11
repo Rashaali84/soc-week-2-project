@@ -6,6 +6,7 @@ function madlib(userNoun, userVerb, userAdj) {
     return 'the ' + userAdj + ' ' + userNoun + ' loves to ' + userVerb + ' in the summer';
   else
     return 'when the ' + userAdj + ' ' + 'rain falls, ' + userNoun + ' begins to ' + userVerb;
+
 }
 
 // if the noun is longer than the verb

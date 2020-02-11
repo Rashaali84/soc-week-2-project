@@ -1,4 +1,4 @@
-# duck-duck-clone
+# soc-week-2-project
 
 ## Table of contents
 

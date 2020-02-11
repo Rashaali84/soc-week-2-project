@@ -33,7 +33,7 @@ function tempConverterHandler() {
   // write this line!
   let result;
   // prompt the user for a noun, verb and adjective
-  const userTempStr = prompt('would you like to convert to "f" for farenheit or "c" celcius?');
+  const userTempStr = prompt('would you like to convert to "f" for farenheit or "c" celcius? , please write "f" or "c" only!');
   if (String(userTempStr) === 'f' || String(userTempStr) === 'c' || String(userTempStr) === 'C' || String(userTempStr) === 'F') {
     // cast userDegreesStr to a Number, and assign the value to userDecrees
     const userDegrees = prompt('enter a temperature to convert');

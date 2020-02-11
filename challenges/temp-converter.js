@@ -2,25 +2,30 @@ console.log('tempConverter script has loaded');
 
 // write this function!
 function tempConverter(degrees, temperature) {
-  var resultValue;
+  var resultValue = 0;
   if (temperature === 'f' || temperature === 'F') {
     resultValue = degrees * 9 / 5 + 32;
+
+    return resultValue;
+  }
+  else if (temperature === 'c' || temperature === 'C') {
+    resultValue = (degrees - 32) * 5 / 9;
+    return Number(resultValue.toFixed(2));
   }
   else {
-    resultValue = (degrees - 32) * 5 / 9;
+    return temperature + " " + "is not supported";
   }
-  return Math.round(resultValue).toFixed(2);
-}
 
+}
 // if the user wants to convert to farenheit
-console.assert(tempConverter(53, 'farenheit') === 127.4, 'first');
-console.assert(tempConverter(0, 'farenheit') === 32, 'second');
-console.assert(tempConverter(-40, 'farenheit') === -40, 'third');
+console.assert(tempConverter(53, 'f') === 127.4, 'first');
+console.assert(tempConverter(0, 'f') === 32, 'second');
+console.assert(tempConverter(-40, 'f') === -40, 'third');
 
 // if the user wants to convert to celcius
-console.assert(tempConverter(0, 'celcius') === 32, 'fourth');
-console.assert(tempConverter(4, 'celcius') === 39.2, 'fifth');
-console.assert(tempConverter(12.4, 'celcius') === 54.32, 'sixth');
+console.assert(tempConverter(0, 'c') === -17.78, 'fourth');
+console.assert(tempConverter(4, 'c') === -15.56, 'fifth');
+console.assert(tempConverter(12.4, 'c') === -10.89, 'sixth');
 
 // if the user inputs an invalid degree
 console.assert(tempConverter(34, 'toad') === 'toad is not supported', 'seventh');

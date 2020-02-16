@@ -2,6 +2,7 @@ console.log('madlib script has loaded');
 
 // write this function!
 function madlib(userNoun, userVerb, userAdj) {
+  //return 'the $(userverb)'
   if (userNoun.length > userVerb.length)
     return 'the ' + userAdj + ' ' + userNoun + ' loves to ' + userVerb + ' in the summer';
   else

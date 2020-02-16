@@ -2,6 +2,7 @@ console.log('padLefts script has loaded');
 
 // write this function!
 function padLeft(string, length) {
+  //strubg,padstrat()
   if (string.length >= length) {
     return string;
   }

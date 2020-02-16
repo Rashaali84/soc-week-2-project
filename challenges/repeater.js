@@ -2,7 +2,7 @@ console.log('repeater script has loaded');
 
 // write this function!
 function repeater(userPhrase, userNum) {
-
+  // str.repeat()
   let concatenateValue = '';
   for (i = 0; i < userNum; i++) {
     concatenateValue += userPhrase + "\n";
